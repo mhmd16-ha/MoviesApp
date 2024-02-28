@@ -5,10 +5,15 @@ import NowPlaying from "../Nowplaying/NowPlaying";
 import Populer from "../Populer/Populer";
 import { FidgetSpinner} from 'react-loader-spinner'
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 export default function Home() {
  
   return (
    <>
+    <Helmet>
+                <meta charSet="utf-8" />
+                <title>Cinmatic</title>
+            </Helmet>
    <div className={"vh100 "+styles.home} >
       <div className="container d-flex justify-content-center flex-column vh-100 ">
         <h2 className="display-4 fw-semibold text-white">
