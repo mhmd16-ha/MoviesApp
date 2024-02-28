@@ -1,0 +1,20 @@
+:root{
+    --maincolor:red;
+}
+
+.btn{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px;
+    width: fit-content;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.maincolor{
+    color:var(--maincolor);
+}
+.home{
+    background-image: url(../../assest/images/zW0v2YT74C6tRafzqqBkfSqLAN0.jpg);
+    background-position: center;
+}

@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar-expand-lg .navbar-nav .nav-link{
+  color: white;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show,.bg-main-color{
+  background-color: red;
+}
+.main-color{
+  color: red;
+}
+.bg-color{
+  background-color: #0f0d0d;
+}
+hr{
+  border: red 1px solid;
+  width: 100%;
+}
+.slick-dots li button:before{
+color: white;
+}
+.slick-dots li.slick-active button:before {
+  color: red;
+
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.navbar-toggler {
+  color:#fff;
+}
