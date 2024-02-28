@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom';
 
 export default function NowPlaying() {
     var settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         
       };
     async function getNowPlaying() {

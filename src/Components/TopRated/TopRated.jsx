@@ -6,11 +6,10 @@ import { FidgetSpinner } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 export default function TopRated() {
     var settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToScroll: 1
       };
     async function getTopRated() {
         const options = {

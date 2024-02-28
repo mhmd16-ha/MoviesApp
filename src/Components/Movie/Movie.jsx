@@ -46,7 +46,7 @@ ballColors={["red","red","red"]}
     <p className='text-light'>{data?.data.overview}</p>
         </div>
       </div>
-      <Link className='bg-main-color text-light text-decoration-none btn btn-success w-25 mt-3' target='_blank' to={data?.data.homepage} >Watch it</Link>
+      <Link className='bg-main-color text-light text-decoration-none btn btn-success mt-3' target='_blank' to={data?.data.homepage} >Watch it</Link>
       </div>
     </div>
   )
