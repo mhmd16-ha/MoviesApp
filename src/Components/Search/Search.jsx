@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FidgetSpinner } from "react-loader-spinner";
+import { useMutation, useQuery } from "react-query";
 
 export default function Search() {
-  let [data, setData] = useState("");
-  let [isLoading,setLoading]=useState(false)
-  async function search(e) {
-    setLoading(true)
+
+  let [value,setvalue]=useState("")
+  async function search(v) {
     const options = {
       method: "GET",
       headers: {
@@ -17,15 +17,20 @@ export default function Search() {
       },
     };
 
-    let data = await axios
+    return await axios
       .request(
-        `https://api.themoviedb.org/3/search/movie?query=${e.target.value}%20&include_adult=false&language=en-US&page=1`,
+        `https://api.themoviedb.org/3/search/movie?query=${v.queryKey[1]}%20&include_adult=false&language=en-US&page=1`,
         options
-      )
-      .catch(() => {setLoading(false) });
-    setData(data);
-    setLoading(false)
+      )   
+    
   }
+  function getvalue(e){
+    setvalue(e.target.value)
+  }
+  let{data,isLoading}=useQuery(["search",value],
+    search
+  )
+  
   return (
     <div className="min-vh-100 bg-color pt-5 mt-5">
       <div className="container">
@@ -35,7 +40,7 @@ export default function Search() {
             type="search"
             placeholder="Search"
             aria-label="Search"
-            onKeyUp={(e) => search(e)}
+            onKeyUp={(e) => getvalue(e)}
           />
         </form>
         <h2 className="mt-2 text-light">
